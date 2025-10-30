@@ -20,7 +20,7 @@ const ListingDetails = () => {
   const getListingDetails = async () => {
     try {
       const response = await fetch(
-        `https://home-rental-r78h.onrender.com/properties/${listingId}`,
+        `http://localhost:3001/properties/${listingId}`,
         {
           method: "GET",
         }
@@ -71,7 +71,7 @@ const ListingDetails = () => {
         totalPrice: listing.price * dayCount,
       }
 
-      const response = await fetch("https://home-rental-r78h.onrender.com/bookings/create", {
+      const response = await fetch("http://localhost:3001/bookings/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -102,7 +102,7 @@ const ListingDetails = () => {
         <div className="photos">
           {listing.listingPhotoPaths?.map((item) => (
             <img
-              src={`https://home-rental-r78h.onrender.com/${item.replace("public", "")}`}
+              src={`http://localhost:3001/${item.replace("public", "")}`}
               alt="error loading"
             />
           ))}
@@ -120,7 +120,7 @@ const ListingDetails = () => {
 
         <div className="profile">
           <img
-            src={`https://home-rental-r78h.onrender.com/${listing.creator.profileImagePath.replace(
+            src={`http://localhost:3001/${listing.creator.profileImagePath.replace(
               "public",
               ""
             )}`}

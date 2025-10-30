@@ -93,7 +93,7 @@ export const categories = [
   },
   {
     img: "assets/skiing_cat.jpg",
-    label: "Ski-in/out",
+    label: "Ski-in_out",
     icon: <FaSkiing />,
     description: "This property has skiing activies!",
   },

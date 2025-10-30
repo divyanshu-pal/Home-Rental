@@ -121,7 +121,7 @@ const CreateListing = () => {
         listingForm.append("listingPhotos", photo);
       });
 
-      const response = await fetch("https://home-rental-r78h.onrender.com/properties/create", {
+      const response = await fetch("http://localhost:3001/properties/create", {
         method: "POST",
         body: listingForm,
       });

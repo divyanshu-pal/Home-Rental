@@ -20,11 +20,11 @@ const Footer = () => {
         <h3>Contact</h3>
         <div className="footer_right_info">
           <LocalPhone />
-          <p>9759790159</p>
+          <p>9919277383</p>
         </div>
         <div className="footer_right_info">S
           <Email />
-          <p>Rishabh@support.com</p>
+          <p>Divyanshu@support.com</p>
         </div>
         <img src="/assets/payment.png" alt="payment" />
       </div>
