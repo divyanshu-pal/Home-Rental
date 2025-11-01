@@ -224,15 +224,15 @@
                 <DateRange ranges={dateRange} onChange={handleSelect} />
                 {dayCount > 1 ? (
                   <h2>
-                    ${listing.price} x {dayCount} nights
+                    {listing.price} x {dayCount} nights
                   </h2>
                 ) : (
                   <h2>
-                    ${listing.price} x {dayCount} night
+                    ₹{listing.price} x {dayCount} night
                   </h2>
                 )}
 
-                <h2>Total price: ${listing.price * dayCount}</h2>
+                <h2>Total price: ₹{listing.price * dayCount}</h2>
                 <p>Start Date: {dateRange[0].startDate.toDateString()}</p>
                 <p>End Date: {dateRange[0].endDate.toDateString()}</p>
 

@@ -111,7 +111,7 @@ const ListingCard = ({
         <>
           <p>{type}</p>
           <p>
-            <span>${price}</span> per night
+            <span>₹{price}</span> per night
           </p>
         </>
       ) : (
