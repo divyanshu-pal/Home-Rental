@@ -55,7 +55,7 @@ Once the user is signed in, the menu expands to include personalized options:
 ## 🏠 Home Page
 Explore categories like **Beachfront**, **Countryside**, **Castles**, etc.
 
-![Home Page](https://github.com/user-attachments/assets/fc06aa8c-f311-460a-88e3-ec65b13d403d)
+![Home Page](https://github.com/user-attachments/assets/6511f452-3362-428f-8fd2-7627f23591e7)
 
 ---
 
@@ -76,7 +76,7 @@ View all property details, amenities, highlights, and booking form.
 ## 💳 Razorpay Payment Page
 Secure payments with **UPI, cards, net banking, and EMI options**.
 
-![Razorpay Payment Page](https://github.com/user-attachments/assets/6511f452-3362-428f-8fd2-7627f23591e7)
+![Razorpay Payment Page](https://github.com/user-attachments/assets/fc06aa8c-f311-460a-88e3-ec65b13d403d)
 
 ---
 
@@ -127,4 +127,17 @@ The **user dropdown menu** dynamically updates based on login status.
 1. **Clone the repository**
    ```bash
    git clone https://github.com/yourusername/dream-nest.git
-   cd dream-nest
+   cd server
+   Install dependencies
+   npm i
+   npm start
+   
+   cd client
+   Install dependencies
+   npm i
+   npm start
+
+Create a .env file in the root directory and include:
+MONGO_URI=your_mongodb_connection_string
+RAZORPAY_KEY_ID=your_razorpay_key
+RAZORPAY_SECRET_KEY=your_razorpay_secret
