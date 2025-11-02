@@ -18,7 +18,7 @@ const CategoryPage = () => {
   const getFeedListings = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3001/properties?category=${category}`,
+        `${process.env.REACT_APP_API_BASE_URL}/properties?category=${category}`,
         {
           method: "GET",
         }

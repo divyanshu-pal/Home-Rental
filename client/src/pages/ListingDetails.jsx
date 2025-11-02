@@ -31,7 +31,7 @@
     const getListingDetails = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/properties/${listingId}`,
+          `${process.env.REACT_APP_API_BASE_URL}/properties/${listingId}`,
           {
             method: "GET",
           }
@@ -82,7 +82,7 @@
           totalPrice: listing.price * dayCount,
         }
 
-        const orderResponse = await fetch("http://localhost:3001/api/razorpay", {
+        const orderResponse = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/razorpay`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ amount: bookingForm.totalPrice }),
@@ -105,7 +105,7 @@
         handler: async function (response) {
           console.log(response,"res")
           const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = response;
-          const verifyResponse = await fetch("http://localhost:3001/api/verify", {
+          const verifyResponse = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/verify`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ razorpay_order_id, razorpay_payment_id, razorpay_signature }),
@@ -115,7 +115,7 @@
           if (verifyData.success) {
             alert("✅ Payment successful!");
 
-          const bookingResponse = await fetch("http://localhost:3001/bookings/create", {
+          const bookingResponse = await fetch(`${process.env.REACT_APP_API_BASE_URL}/bookings/create`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(bookingForm),
@@ -162,7 +162,7 @@
           <div className="photos">
             {listing.listingPhotoPaths?.map((item) => (
               <img
-                src={`http://localhost:3001/${item.replace("public", "")}`}
+                src={`${process.env.REACT_APP_API_BASE_URL}/${item.replace("public", "")}`}
                 alt="error loading"
               />
             ))}
@@ -180,7 +180,7 @@
 
           <div className="profile">
             <img
-              src={`http://localhost:3001/${listing.creator.profileImagePath.replace(
+              src={`${process.env.REACT_APP_API_BASE_URL}/${listing.creator.profileImagePath.replace(
                 "public",
                 ""
               )}`}
