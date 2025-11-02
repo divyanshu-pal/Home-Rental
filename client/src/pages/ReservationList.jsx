@@ -17,7 +17,7 @@ const ReservationList = () => {
   const getReservationList = async () => {
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_BASE_URL}/users/${userId}/reservations`,
+        `https://home-rental-1-gri9.onrender.com/users/${userId}/reservations`,
         {
           method: "GET",
         }

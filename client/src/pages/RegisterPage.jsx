@@ -39,7 +39,7 @@ const RegisterPage = () => {
         register_form.append(key, formData[key])
       }
 
-      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/auth/register`, {
+      const response = await fetch(`https://home-rental-1-gri9.onrender.com/auth/register`, {
         method: "POST",
         body: register_form
       })

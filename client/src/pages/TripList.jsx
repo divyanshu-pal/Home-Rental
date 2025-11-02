@@ -17,7 +17,7 @@ const TripList = () => {
   const getTripList = async () => {
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_BASE_URL}/users/${userId}/trips`,
+        `https://home-rental-1-gri9.onrender.com/users/${userId}/trips`,
         {
           method: "GET",
         }

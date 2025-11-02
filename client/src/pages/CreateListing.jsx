@@ -121,7 +121,7 @@ const CreateListing = () => {
         listingForm.append("listingPhotos", photo);
       });
 
-      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/properties/create`, {
+      const response = await fetch(`https://home-rental-1-gri9.onrender.com/properties/create`, {
         method: "POST",
         body: listingForm,
       });

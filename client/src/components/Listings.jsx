@@ -18,8 +18,8 @@ const Listings = () => {
     try {
       const response = await fetch(
         selectedCategory !== "All"
-          ? `${process.env.REACT_APP_API_BASE_URL}/properties?category=${selectedCategory}`
-          : `${process.env.REACT_APP_API_BASE_URL}/properties`,
+          ? `https://home-rental-1-gri9.onrender.com/properties?category=${selectedCategory}`
+          : `https://home-rental-1-gri9.onrender.com/properties`,
         {
           method: "GET",
         }

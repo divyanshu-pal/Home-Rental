@@ -48,7 +48,7 @@ const ListingCard = ({
   const patchWishList = async () => {
     if (user?._id !== creator._id) {
     const response = await fetch(
-      `${process.env.REACT_APP_API_BASE_URL}/users/${user?._id}/${listingId}`,
+      `https://home-rental-1-gri9.onrender.com/users/${user?._id}/${listingId}`,
       {
         method: "PATCH",
         header: {
@@ -76,7 +76,7 @@ const ListingCard = ({
           {listingPhotoPaths?.map((photo, index) => (
             <div key={index} className="slide">
               <img
-                src={`${process.env.REACT_APP_API_BASE_URL}/${photo?.replace("public", "")}`}
+                src={`https://home-rental-1-gri9.onrender.com/${photo?.replace("public", "")}`}
                 alt={`photo ${index + 1}`}
               />
               <div
